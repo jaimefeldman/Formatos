@@ -29,7 +29,7 @@
 
 import Foundation
 
-extension Formatter {
+public extension Formatter {
     static let scientific: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .scientific
@@ -100,7 +100,7 @@ extension Formatter {
     }()
 }
 
-extension Numeric {
+public extension Numeric {
     var scientificFormat: String {
         return Formatter.scientific.string(for: self) ?? ""
     }
